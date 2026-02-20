@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Reyes Barrios - Fundraising Associate (Retention Campaigns) | UNICEF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', 'Inter', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto;
+            padding: 0.75in;
+            box-sizing: border-box;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2F5233 0%, #00A86B 100%);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* Portfolio highlight section */
+        .portfolio-highlight {
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 25px;
+            padding: 12px 20px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        .portfolio-highlight a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-highlight:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: white;
+            transform: translateY(-1px);
+        }
+        
+        .portfolio-highlight a:hover { color: white; }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-item i {
+            width: 14px;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .contact-item a:hover { border-bottom-color: white; }
+        
+        /* Main intro */
+        .intro-section {
+            background: #f8f9fa;
+            border-left: 4px solid #00A86B;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .intro-text {
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        
+        .intro-text strong {
+            color: #2F5233;
+            font-weight: 600;
+        }
+        
+        /* Section styling */
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #00A86B;
+            padding-bottom: 5px;
+        }
+        
+        /* Experience entries */
+        .experience-item {
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2F5233;
+            line-height: 1.3;
+        }
+        
+        .job-period {
+            font-size: 11px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .company-location {
+            font-size: 12px;
+            color: #00A86B;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .job-description {
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            text-align: justify;
+        }
+        
+        /* Highlights */
+        .highlights {
+            list-style: none;
+            margin: 10px 0 0 0;
+            padding: 0;
+        }
+        
+        .highlights li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 6px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+        
+        .highlights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #F7931E;
+            font-weight: bold;
+        }
+        
+        /* Two column layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        
+        .skill-category { margin-bottom: 10px; }
+        
+        .skill-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2F5233;
+            margin-bottom: 5px;
+        }
+        
+        .skill-list {
+            font-size: 11px;
+            line-height: 1.3;
+            color: #555;
+        }
+        
+        /* Education */
+        .education-item { margin-bottom: 12px; }
+        
+        .education-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2F5233;
+            margin-bottom: 3px;
+        }
+        
+        .education-details {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        /* Value proposition box */
+        .value-prop {
+            background: linear-gradient(135deg, #2F5233 0%, #00A86B 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .value-prop h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .value-item {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 8px;
+        }
+        
+        .value-item-title {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .value-item-title i { opacity: 0.9; }
+        
+        .value-item-desc {
+            font-size: 10px;
+            line-height: 1.3;
+            opacity: 0.9;
+        }
+        
+        /* Typography classes */
+        .serif-emphasis {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-style: italic;
+            color: #00A86B;
+        }
+        
+        .serif-emphasis-white {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-style: italic;
+            color: white;
+        }
+        
+        /* Portfolio link button */
+        .portfolio-link {
+            background: #00A86B;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .portfolio-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 168, 107, 0.3);
+            background: #2F5233;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .two-column { grid-template-columns: 1fr; gap: 15px; }
+            .value-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; align-items: flex-start; }
+            .portfolio-highlight a { font-size: 12px; }
+        }
+        
+        /* Print optimization */
+        @media print {
+            body { margin: 0; padding: 0.5in; font-size: 10px; }
+            .job-title { font-size: 12px; }
+            .section-title { font-size: 15px; }
+            .header { background: #2F5233 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .value-prop { background: #2F5233 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .section { break-inside: avoid; }
+            @page { size: letter; margin: 0.5in; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1><span class="serif-emphasis-white">Juan Reyes Barrios</span></h1>
+        <div class="subtitle">Coordinador de Campañas Multicanal | Análisis de Datos | Gestión Operacional</div>
+        
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Santiago, Chile</div>
+            <div class="contact-item"><i class="fas fa-phone"></i> <a href="https://wa.me/56920323788">+569 203 237 88</a></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:jcreyes1@uc.cl">jcreyes1@uc.cl</a></div>
+            <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/juanreyesbarrios">LinkedIn</a></div>
+            <div class="contact-item"><i class="fas fa-globe"></i> Español (Nativo) | Inglés (Avanzado)</div>
+        </div>
+        
+        <div class="portfolio-highlight">
+            <a href="https://jcreyes1.github.io/ruuf-portfolio/" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-palette"></i> Ver mi Portfolio de trabajo
+            </a>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro-section">
+        <div class="intro-text">
+            Profesional con <strong>8+ años de experiencia en comunicaciones, coordinación de campañas multicanal y gestión operacional</strong> en entornos de alta demanda. En UNICEF Chile he liderado iniciativas que articulan proveedores externos, equipos internos y canales digitales, manteniendo consistencia de mensaje y cumplimiento de indicadores de desempeño. Mi formación en diseño, reforzada por un <strong>Diplomado en Ciencia de Datos orientado a machine learning</strong>, me permite traducir comportamiento de audiencias en decisiones concretas de campaña — combinando visión analítica con capacidad operacional probada.
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+        <h2 class="section-title">Experiencia profesional</h2>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div class="job-title">Design and Graphic Assistant — Comunicación y Abogacía Digital</div>
+                <div class="job-period">Feb 2022 - Actualidad</div>
+            </div>
+            <div class="company-location">UNICEF Chile | Santiago</div>
+            <div class="job-description">
+                Coordiné la ejecución de iniciativas de comunicación multicanal para UNICEF Chile, articulando equipos internos, proveedores externos y plataformas digitales para asegurar coherencia operacional y cumplimiento de los planes anuales de comunicación.
+            </div>
+            <ul class="highlights">
+                <li><strong>Optimicé procesos de ejecución:</strong> Reduje los tiempos de entrega de 2 semanas a 1 día, diseñando flujos de trabajo que garantizan respuesta oportuna ante prioridades institucionales y contingencias</li>
+                <li><strong>Gestioné campañas con presupuestos >$30,000 USD anuales:</strong> Monitoreé indicadores de desempeño en Meta Business Suite y Google Ads, ajustando estrategia según resultados para alcanzar audiencias de 7M+ cuentas</li>
+                <li><strong>Articulé ejecución multicanal:</strong> Coordiné materiales y lineamientos para Instagram, Facebook, YouTube, LinkedIn, email y canales impresos, asegurando consistencia de mensaje en cada punto de contacto con la audiencia</li>
+                <li><strong>Coordiné proveedores y equipos multifuncionales:</strong> Generé términos de referencia para videoístas, fotógrafos y agencias; registré acuerdos, plazos y compromisos operacionales, monitoreando su cumplimiento</li>
+            </ul>
+            <a href="https://jcreyes1.github.io/ruuf-portfolio/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                <i class="fab fa-github"></i> Portafolio de este periodo
+            </a>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div class="job-title">Diseñador y Consultor de Comunicaciones — Freelance</div>
+                <div class="job-period">2018 - 2022</div>
+            </div>
+            <div class="company-location">Múltiples Clientes (La Roche-Posay, Santillana) | Chile & Argentina</div>
+            <div class="job-description">
+                Gestioné proyectos de comunicación de forma autónoma para distintos clientes, coordinando entregables, plazos y estándares de calidad en entornos de alta demanda operacional.
+            </div>
+            <ul class="highlights">
+                <li>Mantuve relaciones de largo plazo con clientes internacionales, asegurando consistencia y adaptación de mensajes para distintos mercados</li>
+                <li>Creé y distribuí materiales digitales y campañas impresas a escala nacional, adaptando recursos para plataformas de e-learning y canales de venta</li>
+                <li>Desarrollé sistemas de recursos visuales reutilizables que mejoraron la eficiencia en la producción de materiales recurrentes</li>
+            </ul>
+            <a href="https://behance.net/juanreyesbarrios" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                <i class="fab fa-behance"></i> Portafolio de este periodo
+            </a>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div class="job-title">Coordinador de Comunicaciones</div>
+                <div class="job-period">2016 - 2017</div>
+            </div>
+            <div class="company-location">Corporación Cultural de Puente Alto</div>
+            <div class="job-description">
+                Construí y administré base de datos de 200+ organizaciones culturales, implementando protocolos de comunicación estandarizados. Establecí sistemas de registro y seguimiento aún en uso.
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <h3>Mi aporte al equipo de <span class="serif-emphasis-white">Fidelización Individual</span></h3>
+        <div class="value-grid">
+            <div class="value-item">
+                <div class="value-item-title"><i class="fas fa-cogs"></i> Ejecución Operacional Probada</div>
+                <div class="value-item-desc">Experiencia real coordinando campañas multicanal bajo plazos exigentes, articulando equipos internos, proveedores y plataformas digitales con coherencia institucional.</div>
+            </div>
+            <div class="value-item">
+                <div class="value-item-title"><i class="fas fa-chart-bar"></i> Orientación a Datos</div>
+                <div class="value-item-desc">Formación en ciencia de datos (Python, Pandas, modelos predictivos de comportamiento). Capacidad para leer indicadores de campaña y traducirlos en decisiones concretas de optimización.</div>
+            </div>
+            <div class="value-item">
+                <div class="value-item-title"><i class="fas fa-users"></i> Conocimiento Institucional</div>
+                <div class="value-item-desc">Trabajo en UNICEF Chile desde 2022. Conozco la cultura organizacional, los valores CRITAS y los procesos internos — lo que reduce la curva de adaptación y facilita la colaboración transversal.</div>
+            </div>
+            <div class="value-item">
+                <div class="value-item-title"><i class="fas fa-sync-alt"></i> Aprendizaje Rápido</div>
+                <div class="value-item-desc">Historial verificable de adopción de nuevas herramientas y procesos en contextos de alta demanda. Listo para incorporar plataformas CRM y herramientas de automatización de campañas.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Column Section -->
+    <div class="two-column">
+        <!-- Left Column: Education & Skills -->
+        <div>
+            <section class="section">
+                <h2 class="section-title">Formación</h2>
+                
+                <div class="education-item">
+                    <div class="education-title">Licenciatura en Artes y Humanidades (Major: Diseño)</div>
+                    <div class="education-details">Pontificia Universidad Católica de Chile | 2012–2016</div>
+                    <div class="education-details"><strong>Minor:</strong> Psicología y Políticas Públicas</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Diplomado en Ciencia de Datos orientado a Machine Learning</div>
+                    <div class="education-details">Universidad de Santiago de Chile (USACH)</div>
+                    <div class="education-details">Análisis exploratorio, modelamiento predictivo, visualización de datos, Python & Pandas</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Diplomado en Infografía</div>
+                    <div class="education-details">Escuela de Diseño UC | 2023</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Curso Intensivo de Creatividad Publicitaria</div>
+                    <div class="education-details">Brother Escuela de Creativos | Buenos Aires, 2019</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Competencias</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-title">Coordinación de Campañas</div>
+                        <div class="skill-list">Planificación operacional, gestión de proveedores, seguimiento de entregables, documentación de procesos, ejecución multicanal</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">Análisis de Datos & Métricas</div>
+                        <div class="skill-list">Python (Pandas, visualización), análisis de comportamiento de audiencias, modelos de churn, análisis exploratorio, lectura de KPIs de campaña</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">Herramientas Digitales</div>
+                        <div class="skill-list">Meta Business Suite, Google Ads, Adobe Creative Suite, Figma, herramientas de IA, Excel (fórmulas, limpieza de datos)</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">Gestión Operacional</div>
+                        <div class="skill-list">Flujos de trabajo escalables, calendarios de campaña, minutas y acuerdos operacionales, consistencia de marca en múltiples canales</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+            <section class="section">
+                <h2 class="section-title">Mi aporte <span class="serif-emphasis">específico</span> al cargo</h2>
+                
+                <div style="font-size: 11px; line-height: 1.4; margin-bottom: 15px;">
+                    <strong style="color: #2F5233;">Ejecución con coherencia institucional:</strong> He trabajado coordinando mensajes para audiencias exigentes bajo estándares internacionales — exactamente la lógica que se necesita para mantener la experiencia del donante consistente en telemarketing, email, WhatsApp y otros canales.
+                </div>
+                
+                <div style="font-size: 11px; line-height: 1.4; margin-bottom: 15px;">
+                    <strong style="color: #2F5233;">Datos para decidir, no solo reportar:</strong> Mi formación en ciencia de datos me permite ir más allá de leer un dashboard: puedo modelar el comportamiento de la base de donantes, identificar señales tempranas de deserción y proponer ajustes basados en evidencia.
+                </div>
+
+                <div style="font-size: 11px; line-height: 1.4; margin-bottom: 15px;">
+                    <strong style="color: #2F5233;">Curva de adaptación mínima:</strong> Conozco UNICEF por dentro — sus procesos de compras, gestión con proveedores, cultura de trabajo y valores institucionales. Eso me permite contribuir desde el primer día sin costo de inducción.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Capacidades transversales</h2>
+                
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #F7931E;">
+                    <div style="font-size: 11px; line-height: 1.4; margin-bottom: 10px;">
+                        <strong>Gestión documental y operacional:</strong> Desarrollé protocolos de comunicación, registros de acuerdos con proveedores y flujos de trabajo internos que estandarizaron procesos del área — con impacto directo en tiempos de entrega y calidad de ejecución.
+                    </div>
+                    
+                    <div style="font-size: 11px; line-height: 1.4; margin-bottom: 10px;">
+                        <strong>Monitoreo y ajuste de campañas:</strong> Monitoreé campañas en Meta y Google Ads, interpretando métricas de rendimiento y realizando ajustes en tiempo real para optimizar resultados dentro del presupuesto disponible.
+                    </div>
+                    
+                    <div style="font-size: 11px; line-height: 1.4;">
+                        <strong>Articulación con equipos internos:</strong> Coordiné con equipos de programas, comunicaciones, finanzas y proveedores externos para asegurar coherencia entre los objetivos estratégicos y la ejecución operacional de cada campaña.
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; text-align: center;">
+        <div style="font-size: 10px; color: #666; font-style: italic;">
+            Portfolio en <a href="https://jcreyes1.github.io/ruuf-portfolio/" target="_blank" rel="noopener noreferrer" style="color: #00A86B; text-decoration: none; border-bottom: 1px solid #00A86B;">jcreyes1.github.io/ruuf-portfolio</a> | Disponible para conversar en cualquier momento
+        </div>
+    </footer>
+</body>
+</html>
